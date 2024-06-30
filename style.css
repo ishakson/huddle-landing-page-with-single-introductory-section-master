@@ -20,6 +20,7 @@
 }
 
 body {
+    font-family: var(--font-poppins);
     position: relative;
     font-size: 1rem;
     height: 100vh;
@@ -28,8 +29,81 @@ body {
     background-size: auto 100%;
     background-color: var(--violet);
     margin:0 auto;
+    padding:  3rem 4rem 3rem 4rem;
     display: flex;
     flex-direction: column;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5.5rem;
+}
+
+.huddle-logo {
+    width: 14rem;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 55fr 45fr;
+}
+.illustrastion img {
+    width: 100%;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem;
+    
+}
+
+.hero-text h1 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    font-family: var(--font-open-sans);
+    line-height:1.5;
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.774);
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    border: none;
+    width: 12rem;
+    height: 3rem;
+    border-radius: 25px;
+    background-color: white;
+    color: var(--violet);
+    font-size: 1.2rem;
+    font-weight: 400;
+    box-shadow: 0 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.social-icons {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+.social-icons:last-child {
+    margin-right: 1.2rem;
 }
 
 footer {
@@ -37,4 +111,71 @@ footer {
     bottom: 0;
     right:50%;
     transform: translate(50%, -50%);
+}
+
+
+@media (min-width:1440px) {
+    .illustrastion  {
+        width: 40rem;
+    }
+   
+    
+}
+
+@media (max-width:1125px) {
+   body {
+    padding:  2rem 3rem 2rem 3rem;
+    
+   
+   }
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50fr 50fr;
+        height: 60rem;
+    }
+
+    .huddle-logo {
+        width: 10rem;
+    }
+    
+
+    .hero-text {
+       
+        align-items: center;
+        text-align: center;
+        padding:1rem;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .hero-description {
+        margin-bottom: 1.5rem;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    footer {
+        display: none;
+    }
+    
+}
+
+@media (max-width:625px){
+    body {
+        background-image: url(./images/bg-mobile.svg);
+        background-size:contain ;
+
+    }
+    
+    .hero {
+        margin-bottom: 2rem;
+    }
+    
 }
